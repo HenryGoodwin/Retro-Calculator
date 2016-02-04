@@ -59,9 +59,17 @@ class ViewController: UIViewController {
     
     @IBAction func numberPressed(btn: UIButton) {
         playSound()
-        runningNumber += "\(btn.tag)"
-        displayLabel.text = runningNumber
         
+        if btn.tag == 11 {
+            
+            runningNumber += "."
+            
+        } else {
+            
+            runningNumber += "\(btn.tag)"
+        }
+        
+        displayLabel.text = runningNumber
     }
 
     @IBAction func clear(sender: AnyObject) {
